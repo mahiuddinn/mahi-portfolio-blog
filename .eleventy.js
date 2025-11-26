@@ -9,15 +9,6 @@ const { DateTime } = require("luxon");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const htmlmin = require("html-minifier");
 
-module.exports = function(eleventyConfig) {
-eleventyConfig.addPassthroughCopy("public");
-return { dir: { input: ".", output: "_site" } };
-};
-
-module.exports = function (eleventyConfig) {
-  // Disable automatic use of your .gitignore
-  eleventyConfig.setUseGitIgnore(false);
-
   // Merge data instead of overriding
   eleventyConfig.setDataDeepMerge(true);
 
